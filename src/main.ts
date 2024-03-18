@@ -1,5 +1,10 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import ElContainer from './components/container'
 
-createApp(App).mount('#app')
+
+const app=createApp(App)
+app.config.globalProperties.$ALIEMENTS={
+    size:'large',
+}
+app.use(ElContainer).mount('#app')
