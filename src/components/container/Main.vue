@@ -25,7 +25,7 @@ export default{
   overflow: auto;
   box-sizing: border-box;
   padding: $--main-padding;
-  background: red;
+  background: rgb(241, 231, 239);
 }
 
 </style>
