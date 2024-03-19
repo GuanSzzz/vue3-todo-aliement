@@ -5,6 +5,14 @@
   </header>
 </template>
 
+
+<!-- <script lang="ts">
+export default{
+  name:'ElHeader'
+}
+</script> -->
+
+
 <script setup lang="ts" name="ElHeader">
 import { withDefaults } from "vue";
 
@@ -18,11 +26,14 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 
+
+
 <style lang="scss">
 @import "../styles/mixin.scss";
 @include b(header) {
   padding: $--header-padding;
   box-sizing: border-box;
   flex-shrink: 0;
+  background-color:#67c23a;
 }
 </style>

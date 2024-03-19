@@ -10,7 +10,15 @@
   </aside>
 </template>
 
-<script setup lang="ts" name="ElAside">
+
+<!-- <script lang="ts">
+export default{
+  name:'ElAside'
+}
+</script> -->
+
+
+<script setup lang="ts"  name="ElAside">
 import {withDefaults} from 'vue'
 
 type PropValues = {
@@ -27,6 +35,7 @@ withDefaults(defineProps<PropValues>(),{
   overflow: auto;
   box-sizing: border-box;
   flex-shrink: 0;
+  background: pink;
 }
 
 </style>

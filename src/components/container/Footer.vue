@@ -4,6 +4,12 @@
   </footer>
 </template>
 
+<!-- <script lang="ts">
+export default{
+  name:'ElFooter'
+}
+</script>
+   -->
 
 <script setup lang="ts" name="ElFooter">
 import { withDefaults } from "vue";
@@ -26,6 +32,7 @@ withDefaults(defineProps<Props>(), {
   flex-shrink: 0;
   @include m(inner){
     width:300px;
+    background-color: aquamarine;
   }
 }
 </style>

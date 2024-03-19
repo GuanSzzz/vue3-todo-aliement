@@ -7,6 +7,8 @@ import ElMain from './Main.vue'
 
 export default {
   install(app:App){
+    console.log(ElContainer,666);
+    
     app.component(ElContainer.name,ElContainer)
     app.component(ElHeader.name,ElHeader)
     app.component(ElFooter.name,ElFooter)

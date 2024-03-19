@@ -7,6 +7,15 @@
   </section> 
 </template>
 
+
+<!-- <script lang="ts">
+export default{
+  name:'ElContainer'
+}
+</script> -->
+
+
+
 <script setup lang="ts" name="ElContainer">
 
 import {useSlots,computed,VNode,Component} from 'vue'
@@ -44,6 +53,7 @@ const isVertical = computed(() => {
   min-width: 0;
   @include when(vertical) {
     flex-direction: column;
+    background: #ccc;
   }
 }
 
