@@ -37,7 +37,22 @@
     <el-aside width="200px">Aside</el-aside>
     <el-container>
       <el-header>Header</el-header>
-      <el-main>Main</el-main>
+      <el-main>
+        <div>
+          <el-button @click="showDialog = true"> open弹窗 </el-button>
+          <el-dialog v-if="showDialog">
+            <iframe
+              src="//player.bilibili.com/player.html?aid=673762230&bvid=BV1pU4y1G7VX&cid=358701287&page=1"
+              scrolling="no"
+              border="0"
+              frameborder="no"
+              framespacing="0"
+              allowfullscreen="true"
+            />
+            <el-button @click="showDialog = false"> close弹窗 </el-button>
+          </el-dialog>
+        </div>
+      </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
   </el-container>
@@ -45,7 +60,7 @@
 
 <script setup lang="ts">
 import ElButton from "./components/button/Button.vue";
-
+import ElDialog from "./components/dialog/Dialog.vue";
 import { ref, reactive } from "vue";
 const comp = ref("form");
 import { FormType } from "./components/form/type";
@@ -81,6 +96,9 @@ const login = () => {
     }
   });
 };
+
+// 控制弹窗显隐
+const showDialog = ref<boolean>(false);
 </script>
 
 <style>
